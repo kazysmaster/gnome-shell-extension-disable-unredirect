@@ -1,8 +1,17 @@
 {
-   "shell-version": ["3.2"], 
-   "uuid": "unredirect@vaina.lt", 
-   "name": "Disable unredirect fullscreen windows", 
-   "description": "Disables unredirect fullscreen windows in gnome-shell to worakround https://bugzilla.redhat.com/show_bug.cgi?id=767397", 
-   "url": "https://github.com/kazysmaster/gnome-shell-extension-disable-unredirect",
-   "original-authors": "Kazimieras Vaina"
+   "shell-version":[
+      "3.2",
+      "3.4",
+      "3.6",
+      "3.8",
+      "3.10",
+      "3.12",
+      "3.14",
+
+   ],
+   "uuid":"unredirect@vaina.lt",
+   "name":"Disable unredirect fullscreen windows",
+   "description":"Disables unredirect fullscreen windows in gnome-shell to worakround https://bugzilla.redhat.com/show_bug.cgi?id=767397",
+   "url":"https://github.com/kazysmaster/gnome-shell-extension-disable-unredirect",
+   "original-authors":"Kazimieras Vaina"
 }
