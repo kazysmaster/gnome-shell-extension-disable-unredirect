@@ -1,13 +1,24 @@
 const Meta = imports.gi.Meta;
 
-function init() {	
+function init() {
 }
 
 function enable() {
-	Meta.disable_unredirect_for_screen(global.screen);
+	try {
+		// >= 3.30
+		Meta.disable_unredirect_for_display(global.display);
+	} catch (_ex) {
+		// < 3.30
+		Meta.disable_unredirect_for_screen(global.screen);
+	}
 }
 
 function disable() {
-	Meta.enable_unredirect_for_screen(global.screen);
+	try {
+		// >= 3.30
+		Meta.enable_unredirect_for_display(global.display);
+	} catch (_ex) {
+		// < 3.30
+		Meta.enable_unredirect_for_screen(global.screen);
+	}
 }
-
