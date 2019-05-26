@@ -1,6 +1,6 @@
 Disables unredirect fullscreen windows in gnome-shell to workaround https://bugzilla.redhat.com/show_bug.cgi?id=767397
 
-(Horrible bug, where clicking on full screen windows goes through to windows underneath).
+(bug, when clicking on full screen windows goes through to windows underneath).
 
 Install
 -------
