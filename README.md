@@ -5,8 +5,11 @@ Disables unredirect fullscreen windows in gnome-shell to workaround https://bugz
 Install
 -------
 
-This command will grab this file from github
-```bash -c '(cd ~/.local/share/gnome-shell/extensions; curl -LkSs https://api.github.com/repos/kazysmaster/gnome-shell-extension-disable-unredirect/tarball | tar -xvz --wildcards --strip 1 "kazysmaster-gnome-shell-extension-disable-unredirect-???????/unredirect@vaina.lt")'```
+This command will grab this file from github:
+
+```bash
+ext=~/.local/share/gnome-shell/extensions; mkdir -p "$ext" && cd "$ext" && curl -LkSs https://api.github.com/repos/kazysmaster/gnome-shell-extension-disable-unredirect/tarball | tar -xvz --wildcards --strip 1 "kazysmaster-gnome-shell-extension-disable-unredirect-???????/unredirect@vaina.lt"
+```
 
 Then press ALT-F2 and enter ```r``` and press enter to restart gnome-shell.
 
