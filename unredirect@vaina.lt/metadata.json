@@ -7,5 +7,5 @@
    "description":"Disables unredirect fullscreen windows in gnome-shell to workaround https://bugzilla.redhat.com/show_bug.cgi?id=767397 and https://bugzilla.gnome.org/show_bug.cgi?id=738719",
    "url":"https://github.com/kazysmaster/gnome-shell-extension-disable-unredirect",
    "original-authors":"Kazimieras Vaina",
-   "version": 3.3
+   "version": 4.0
 }
