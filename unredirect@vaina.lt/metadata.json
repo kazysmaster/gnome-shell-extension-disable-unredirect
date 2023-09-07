@@ -1,29 +1,11 @@
 {
    "shell-version":[
-      "3.2",
-      "3.4",
-      "3.6",
-      "3.8",
-      "3.10",
-      "3.12",
-      "3.14",
-      "3.16",
-      "3.18",
-      "3.20",
-      "3.30",
-      "3.32",
-      "3.36",
-      "3.38",
-      "40",
-      "41",
-      "42",
-      "43",
-      "44"
+      "45"
    ],
    "uuid":"unredirect@vaina.lt",
    "name":"Disable unredirect fullscreen windows",
    "description":"Disables unredirect fullscreen windows in gnome-shell to workaround https://bugzilla.redhat.com/show_bug.cgi?id=767397 and https://bugzilla.gnome.org/show_bug.cgi?id=738719",
    "url":"https://github.com/kazysmaster/gnome-shell-extension-disable-unredirect",
    "original-authors":"Kazimieras Vaina",
-   "version": 3.3
+   "version": 4.0
 }
