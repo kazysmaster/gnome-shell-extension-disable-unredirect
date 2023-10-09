@@ -1,6 +1,6 @@
 import Meta from 'gi://Meta';
 
-export default class Extension {
+export default class UnredirectExtension {
 	enable() {
 		Meta.disable_unredirect_for_display(global.display);
 	}
