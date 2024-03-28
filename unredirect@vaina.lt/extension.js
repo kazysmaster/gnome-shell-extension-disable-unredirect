@@ -1,11 +1,21 @@
 import Meta from 'gi://Meta';
 
 export default class UnredirectExtension {
-	enable() {
-		Meta.disable_unredirect_for_display(global.display);
-	}
+    constructor() {
+        this.isEnabled = false;
+    }
 
-	disable() {
-		Meta.enable_unredirect_for_display(global.display);
-	}
+    enable() {
+        if (!this.isEnabled) {
+            Meta.disable_unredirect_for_display(global.display);
+            this.isEnabled = true;
+        }
+    }
+
+    disable() {
+        if (this.isEnabled) {
+            Meta.enable_unredirect_for_display(global.display);
+            this.isEnabled = false;
+        }
+    }
 }
