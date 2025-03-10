@@ -1,29 +1,26 @@
-import Meta from 'gi://Meta';
-
 export default class UnredirectExtension {
     constructor() {
-        this.orig_enable_unredirect_for_display = null;
+        this.orig_enable_unredirect = null;
     }
 
     enable() {
-        if (this.orig_enable_unredirect_for_display == null) {
-            console.debug("Monkey patching Meta.enable_unredirect_for_display(display) function");
-            this.orig_enable_unredirect_for_display = Meta.enable_unredirect_for_display;
-            Meta.enable_unredirect_for_display = function(display) {
-                // should I check for display?
-                console.debug("Ignoring invocation of Meta.enable_unredirect_for_display(display)");
+        if (this.orig_enable_unredirect == null) {
+            console.debug("Monkey patching global.compositor.enable_unredirect() function");
+            this.orig_enable_unredirect = global.compositor.enable_unredirect;
+            global.compositor.enable_unredirect_for_display = function () {
+                console.debug("Ignoring invocation of global.compositor.enable_unredirect()");
             };
-            Meta.disable_unredirect_for_display(global.display);
+            global.compositor.disable_unredirect();
         }
     }
 
     disable() {
-        if (this.orig_enable_unredirect_for_display != null) {
-            console.debug("Restoring Meta.enable_unredirect_for_display(display) function");
-            Meta.enable_unredirect_for_display = this.orig_enable_unredirect_for_display;
-            this.orig_enable_unredirect_for_display = null;
-            console.debug("Invoking Meta.enable_unredirect_for_display(display)");
-            Meta.enable_unredirect_for_display(global.display);
+        if (this.orig_enable_unredirect != null) {
+            console.debug("Restoring global.compositor.enable_unredirect() function");
+            global.compositor.enable_unredirect = this.orig_enable_unredirect;
+            this.orig_enable_unredirect = null;
+            console.debug("Invoking global.compositor.enable_unredirect()");
+            global.compositor.enable_unredirect();
         }
     }
 }
