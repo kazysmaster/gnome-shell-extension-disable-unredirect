@@ -1,8 +1,6 @@
 {
    "shell-version":[
-      "45",
-      "46",
-      "47"
+      "48"
    ],
    "uuid":"unredirect@vaina.lt",
    "name":"Disable unredirect fullscreen windows",
