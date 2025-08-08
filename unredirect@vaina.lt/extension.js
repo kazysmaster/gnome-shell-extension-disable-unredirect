@@ -7,7 +7,7 @@ export default class UnredirectExtension {
         if (this.orig_enable_unredirect == null) {
             console.debug("Monkey patching global.compositor.enable_unredirect() function");
             this.orig_enable_unredirect = global.compositor.enable_unredirect;
-            global.compositor.enable_unredirect_for_display = function () {
+            global.compositor.enable_unredirect = function () {
                 console.debug("Ignoring invocation of global.compositor.enable_unredirect()");
             };
             global.compositor.disable_unredirect();
